@@ -105,6 +105,7 @@ sudo gitlab-runner register -n \
     --url ${var.gitlab_url} \
     --registration-token ${var.ci_token} \
     --executor "docker+machine" \
+    --docker-privileged "true" \
     --docker-image "alpine:latest" \
     --tag-list "${var.ci_runner_tags}" \
     --run-untagged="${var.ci_runner_untagged}" \
