@@ -105,7 +105,7 @@ sudo gitlab-runner register -n \
     --url ${var.gitlab_url} \
     --registration-token ${var.ci_token} \
     --executor "docker+machine" \
-    --docker-privileged "true" \
+    --docker-privileged "false" \
     --docker-volumes "/var/run/docker.sock:/var/run/docker.sock" \
     --docker-image "docker:19.03.12" \
     --tag-list "${var.ci_runner_tags}" \
